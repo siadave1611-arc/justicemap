@@ -77,13 +77,13 @@ section[data-testid="stSidebar"] { display: none; }
 .cat-summary { font-size: 11px; color: #9B9893; padding-left: 15px; }
 .score-red { color: #C0392B; }
 .score-amber { color: #F2A627; }
-.score-green { color: #C0392B; }
+.score-green { color: #8B9E2A; }
 .dot-red { background: #C0392B; }
 .dot-amber { background: #F2A627; }
-.dot-green { background: #C0392B; }
+.dot-green { background: #8B9E2A; }
 .bar-red { background: #C0392B; }
 .bar-amber { background: #F2A627; }
-.bar-green { background: #C0392B; }
+.bar-green { background: #8B9E2A; }
 
 /* Ask AI button */
 .ask-btn {
