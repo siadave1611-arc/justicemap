@@ -299,7 +299,7 @@ with left:
 
     st.markdown(f"<h2 style='font-size:26px;font-weight:800;color:#1A1A1A;margin-bottom:2px;margin-top:4px;line-height:1;'>{country}</h2>", unsafe_allow_html=True)
     st.markdown(f"<span style='background:#F0EDE8;color:#6B6B6B;padding:3px 10px;border-radius:20px;font-size:11px;'>{region_label} · {st.session_state.selected_year}</span>", unsafe_allow_html=True)
-    st.markdown(f"<div style='font-family:Georgia,serif;font-size:48px;color:#1A1A1A;line-height:1;margin:12px 0 4px;'>{overall if overall else '—'}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='font-family:Georgia,serif;font-size:28px;color:#1A1A1A;line-height:1;margin:2px 0 1px;'>{overall if overall else '—'}</div>", unsafe_allow_html=True)
     st.markdown("<div style='font-size:9px;color:#9B9893;text-transform:uppercase;letter-spacing:0.06em;margin:2px 0 6px;'>Overall Rule of Law Score</div><div style='height:1px;background:#F4F2EE;margin:4px 0;'></div><div style='font-size:9px;color:#9B9893;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;'>Your rights here</div>", unsafe_allow_html=True)
 
     for cat_name, meta in CATEGORIES.items():
