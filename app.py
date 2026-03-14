@@ -118,6 +118,7 @@ section[data-testid="stSidebar"] { display: none; }
 .msg-legal-aid { font-size: 11px; color: #9B9893; font-style: italic; margin-top: 10px; }
 .chat-input-area { padding: 12px 18px; border-top: 1px solid #E8E8E5; }
 .chat-placeholder { font-size: 12px; color: #9B9893; }
+div[role="radiogroup"] label{background:#F0EDE8;border-radius:20px;padding:5px 16px;font-size:12px;font-weight:500;border:1px solid #E8E8E5;margin-right:6px;display:inline-flex;align-items:center;cursor:pointer;} div[role="radiogroup"] label:has(input:checked){background:#1D9E75!important;color:white!important;border-color:#1D9E75!important;} div[role="radiogroup"] label input{display:none!important;} div[role="radiogroup"]{gap:0!important;flex-wrap:wrap;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -263,8 +264,8 @@ regions = ["All Regions"] + sorted(df['region'].dropna().unique().tolist())
 
 col_f1, col_f2, col_f3 = st.columns([3, 1.2, 0.8])
 with col_f1:
-    dim_choice = st.radio("Dimension", list(dims.keys()), horizontal=True, label_visibility="collapsed")
-    st.session_state.selected_dimension = dims[dim_choice]
+    dim_choice = st.segmented_control("Dimension", list(dims.keys()), default="Overall Score", label_visibility="collapsed")
+    if dim_choice: st.session_state.selected_dimension = dims[dim_choice]
 with col_f2:
     region_filter = st.selectbox("Region", regions, label_visibility="collapsed")
 with col_f3:
