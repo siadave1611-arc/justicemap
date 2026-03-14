@@ -294,7 +294,7 @@ with left:
     region_label = row['region'] if row is not None else "—"
     overall = round(float(row['overall']), 2) if row is not None and pd.notna(row['overall']) else None
 
-    st.markdown(f"<h2 style='font-size:28px;font-weight:700;color:#1A1A1A;margin-bottom:4px;'>{country}</h2>", unsafe_allow_html=True)
+    st.markdown(f"<h2 style='font-size:36px;font-weight:800;color:#1A1A1A;margin-bottom:4px;margin-top:8px;line-height:1;'>{country}</h2>", unsafe_allow_html=True)
     st.markdown(f"<span style='background:#F0EDE8;color:#6B6B6B;padding:3px 10px;border-radius:20px;font-size:11px;'>{region_label} · {st.session_state.selected_year}</span>", unsafe_allow_html=True)
     st.markdown(f"<div style='font-family:Georgia,serif;font-size:48px;color:#1A1A1A;line-height:1;margin:12px 0 4px;'>{overall if overall else '—'}</div>", unsafe_allow_html=True)
     st.caption("OVERALL RULE OF LAW SCORE")
