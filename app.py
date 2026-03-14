@@ -19,7 +19,7 @@ st.markdown("""
 [data-testid="stAppViewContainer"] { background: #FFFFFF; }
 [data-testid="stHeader"] { display: none; }
 section[data-testid="stSidebar"] { display: none; }
-.block-container { padding: 1rem 2rem !important; max-width: 100% !important; }
+.block-container { padding: 0.2rem 3rem 0.2rem 2rem !important; max-width: 100% !important; }
 * { font-family: 'Inter', sans-serif; box-sizing: border-box; }
 
 /* Top nav */
@@ -119,6 +119,8 @@ section[data-testid="stSidebar"] { display: none; }
 .chat-input-area { padding: 12px 18px; border-top: 1px solid #E8E8E5; }
 .chat-placeholder { font-size: 12px; color: #9B9893; }
 div[role="radiogroup"] label{background:#F0EDE8;border-radius:20px;padding:5px 16px;font-size:12px;font-weight:500;border:1px solid #E8E8E5;margin-right:6px;display:inline-flex;align-items:center;cursor:pointer;} div[role="radiogroup"] label:has(input:checked){background:#1D9E75!important;color:white!important;border-color:#1D9E75!important;} div[role="radiogroup"] label input{display:none!important;} div[role="radiogroup"]{gap:0!important;flex-wrap:wrap;}
+[data-testid="stSegmentedControl"] { margin-bottom: 0 !important; padding-bottom: 0 !important; } .stColumns { margin-top: 0 !important; } div[data-testid="column"] { padding-top: 0 !important; }
+section[data-testid="stMain"] .block-container{padding-top:0.2rem!important;} div[data-testid="stVerticalBlockBorderWrapper"]{padding:0!important;} [data-testid="stSegmentedControl"]{margin-bottom:0!important;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -273,7 +275,7 @@ with col_f3:
                                    value="2025", label_visibility="collapsed")
     st.session_state.selected_year = year_choice
 
-st.divider()
+st.markdown("<hr style=\"margin:4px 0;border:none;border-top:1px solid #E8E8E5;\">", unsafe_allow_html=True)
 
 # ── Filter data ─────────────────────────────────────────────────────────────────
 year_df = df[df['year'] == st.session_state.selected_year].copy()
@@ -295,12 +297,10 @@ with left:
     region_label = row['region'] if row is not None else "—"
     overall = round(float(row['overall']), 2) if row is not None and pd.notna(row['overall']) else None
 
-    st.markdown(f"<h2 style='font-size:36px;font-weight:800;color:#1A1A1A;margin-bottom:4px;margin-top:8px;line-height:1;'>{country}</h2>", unsafe_allow_html=True)
+    st.markdown(f"<h2 style='font-size:26px;font-weight:800;color:#1A1A1A;margin-bottom:2px;margin-top:4px;line-height:1;'>{country}</h2>", unsafe_allow_html=True)
     st.markdown(f"<span style='background:#F0EDE8;color:#6B6B6B;padding:3px 10px;border-radius:20px;font-size:11px;'>{region_label} · {st.session_state.selected_year}</span>", unsafe_allow_html=True)
     st.markdown(f"<div style='font-family:Georgia,serif;font-size:48px;color:#1A1A1A;line-height:1;margin:12px 0 4px;'>{overall if overall else '—'}</div>", unsafe_allow_html=True)
-    st.caption("OVERALL RULE OF LAW SCORE")
-    st.divider()
-    st.caption("YOUR RIGHTS HERE")
+    st.markdown("<div style='font-size:9px;color:#9B9893;text-transform:uppercase;letter-spacing:0.06em;margin:2px 0 6px;'>Overall Rule of Law Score</div><div style='height:1px;background:#F4F2EE;margin:4px 0;'></div><div style='font-size:9px;color:#9B9893;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;'>Your rights here</div>", unsafe_allow_html=True)
 
     for cat_name, meta in CATEGORIES.items():
         col = meta["col"]
