@@ -19,7 +19,7 @@ st.markdown("""
 [data-testid="stAppViewContainer"] { background: #FFFFFF; }
 [data-testid="stHeader"] { display: none; }
 section[data-testid="stSidebar"] { display: none; }
-.block-container { padding: 0 !important; max-width: 100% !important; }
+.block-container { padding: 1rem 2rem !important; max-width: 100% !important; }
 * { font-family: 'Inter', sans-serif; box-sizing: border-box; }
 
 /* Top nav */
@@ -74,7 +74,7 @@ section[data-testid="stSidebar"] { display: none; }
 .cat-score { font-size: 13px; font-weight: 600; }
 .cat-bar-bg { height: 3px; background: #F0EDE8; border-radius: 2px; margin-bottom: 4px; }
 .cat-bar-fill { height: 3px; border-radius: 2px; }
-.cat-summary { font-size: 11px; color: #9B9893; }
+.cat-summary { font-size: 11px; color: #9B9893; padding-left: 15px; }
 .score-red { color: #D85A30; }
 .score-amber { color: #EF9F27; }
 .score-green { color: #1D9E75; }
@@ -286,7 +286,7 @@ country_data = df[
 row = country_data.iloc[0] if len(country_data) > 0 else None
 
 # ── Three columns ───────────────────────────────────────────────────────────────
-left, centre, right = st.columns([1.1, 2.2, 1.1])
+spacer, left, centre, right = st.columns([0.05, 1.1, 2.2, 1.1], gap="small")
 
 # ══ LEFT PANEL ══════════════════════════════════════════════════════════════════
 with left:
@@ -294,14 +294,12 @@ with left:
     region_label = row['region'] if row is not None else "—"
     overall = round(float(row['overall']), 2) if row is not None and pd.notna(row['overall']) else None
 
-    st.markdown(f"""
-    <div class="left-panel" style="height:calc(100vh - 120px); overflow-y:auto;">
-      <div class="country-name">{country}</div>
-      <div class="country-badge">{region_label} · {st.session_state.selected_year}</div>
-      <div class="score-hero">{overall if overall else '—'}</div>
-      <div class="score-label">Overall Rule of Law Score</div>
-      <div class="section-label">Your rights here</div>
-    """, unsafe_allow_html=True)
+    st.markdown(f"### {country}")
+    st.markdown(f"<span style='background:#F0EDE8;color:#6B6B6B;padding:3px 10px;border-radius:20px;font-size:11px;'>{region_label} · {st.session_state.selected_year}</span>", unsafe_allow_html=True)
+    st.markdown(f"<div style='font-family:Georgia,serif;font-size:48px;color:#1A1A1A;line-height:1;margin:12px 0 4px;'>{overall if overall else '—'}</div>", unsafe_allow_html=True)
+    st.caption("OVERALL RULE OF LAW SCORE")
+    st.divider()
+    st.caption("YOUR RIGHTS HERE")
 
     for cat_name, meta in CATEGORIES.items():
         col = meta["col"]
@@ -318,7 +316,7 @@ with left:
             <span class="cat-score {sc}">{score_txt}</span>
           </div>
           <div class="cat-bar-bg"><div class="cat-bar-fill {bc}" style="width:{bar_w}%"></div></div>
-          <div class="cat-summary">{summary}</div>
+          <div style="font-size:11px;color:#9B9893;padding-left:15px;">{summary}</div>
         </div>
         """, unsafe_allow_html=True)
 
