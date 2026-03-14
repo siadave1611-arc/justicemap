@@ -488,18 +488,6 @@ Your role:
             st.rerun()
 
     # Chat input
-    with st.form("chat_form", clear_on_submit=True):
-        col_inp, col_btn = st.columns([5, 1])
-        with col_inp:
-            user_input = st.text_input(
-                "chat",
-                placeholder=f"Ask about your rights in {st.session_state.selected_country}…",
-                label_visibility="collapsed"
-            )
-        with col_btn:
-            submitted = st.form_submit_button("→", use_container_width=True)
-
-        if submitted and user_input.strip():
             st.session_state.chat_messages.append({"role": "user", "content": user_input.strip()})
             st.rerun()
 
