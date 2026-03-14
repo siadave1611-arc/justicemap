@@ -246,7 +246,7 @@ df = load_data()
 st.markdown("""
 <div class="topnav">
   <div class="topnav-logo">
-    <div class="topnav-logo-icon">⚖</div>
+    <div class="topnav-logo-icon"><svg width="20" height="20" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="50" y1="10" x2="50" y2="90" stroke="white" stroke-width="6" stroke-linecap="round"/><line x1="15" y1="25" x2="85" y2="25" stroke="white" stroke-width="6" stroke-linecap="round"/><path d="M 5,25 Q 15,45 25,25" stroke="white" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M 75,25 Q 85,45 95,25" stroke="white" stroke-width="5" stroke-linecap="round" fill="none"/><line x1="35" y1="90" x2="65" y2="90" stroke="white" stroke-width="6" stroke-linecap="round"/></svg></div>
     Justice Map
   </div>
   <div class="topnav-right">
@@ -294,7 +294,7 @@ with left:
     region_label = row['region'] if row is not None else "—"
     overall = round(float(row['overall']), 2) if row is not None and pd.notna(row['overall']) else None
 
-    st.markdown(f"### {country}")
+    st.markdown(f"<h2 style='font-size:28px;font-weight:700;color:#1A1A1A;margin-bottom:4px;'>{country}</h2>", unsafe_allow_html=True)
     st.markdown(f"<span style='background:#F0EDE8;color:#6B6B6B;padding:3px 10px;border-radius:20px;font-size:11px;'>{region_label} · {st.session_state.selected_year}</span>", unsafe_allow_html=True)
     st.markdown(f"<div style='font-family:Georgia,serif;font-size:48px;color:#1A1A1A;line-height:1;margin:12px 0 4px;'>{overall if overall else '—'}</div>", unsafe_allow_html=True)
     st.caption("OVERALL RULE OF LAW SCORE")
