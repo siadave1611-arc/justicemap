@@ -26,23 +26,23 @@ section[data-testid="stSidebar"] { display: none; }
 .topnav {
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 24px; height: 48px;
-    border-bottom: 1px solid #E8E8E5; background: #fff;
+    border-bottom: 1px solid #E8DDD0; background: #fff;
 }
 .topnav-logo { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: #1A1A1A; }
-.topnav-logo-icon { width: 28px; height: 28px; background: #1D9E75; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; }
+.topnav-logo-icon { width: 28px; height: 28px; background: #C0392B; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; }
 .topnav-right { display: flex; align-items: center; gap: 12px; font-size: 12px; color: #6B6B6B; }
-.badge { background: #F0EDE8; color: #6B6B6B; padding: 3px 10px; border-radius: 20px; font-size: 11px; }
+.badge { background: #F0E8DC; color: #6B6B6B; padding: 3px 10px; border-radius: 20px; font-size: 11px; }
 
 /* Filter bar */
 .filterbar {
     display: flex; align-items: center; gap: 16px;
-    padding: 8px 24px; background: #F8F8F6;
-    border-bottom: 1px solid #E8E8E5; flex-wrap: wrap;
+    padding: 8px 24px; background: #FDF6EE;
+    border-bottom: 1px solid #E8DDD0; flex-wrap: wrap;
 }
 .filter-label { font-size: 11px; color: #9B9893; font-weight: 500; white-space: nowrap; }
-.pill { padding: 4px 12px; border-radius: 20px; font-size: 11px; cursor: pointer; border: 1px solid #E8E8E5; background: #fff; color: #6B6B6B; white-space: nowrap; }
-.pill-active { background: #1D9E75; color: #fff; border-color: #1D9E75; }
-.divider { width: 1px; height: 20px; background: #E8E8E5; }
+.pill { padding: 4px 12px; border-radius: 20px; font-size: 11px; cursor: pointer; border: 1px solid #E8DDD0; background: #fff; color: #6B6B6B; white-space: nowrap; }
+.pill-active { background: #C0392B; color: #fff; border-color: #C0392B; }
+.divider { width: 1px; height: 20px; background: #E8DDD0; }
 
 /* Main layout */
 .main-layout {
@@ -54,71 +54,71 @@ section[data-testid="stSidebar"] { display: none; }
 
 /* Left panel */
 .left-panel {
-    border-right: 1px solid #E8E8E5;
+    border-right: 1px solid #E8DDD0;
     padding: 20px 18px;
     overflow-y: auto;
     background: #fff;
 }
 .country-name { font-size: 28px; font-weight: 700; color: #1A1A1A; margin-bottom: 6px; }
-.country-badge { display: inline-block; background: #F0EDE8; color: #6B6B6B; padding: 3px 10px; border-radius: 20px; font-size: 11px; margin-bottom: 16px; }
+.country-badge { display: inline-block; background: #F0E8DC; color: #6B6B6B; padding: 3px 10px; border-radius: 20px; font-size: 11px; margin-bottom: 16px; }
 .score-hero { font-family: 'Georgia', serif; font-size: 52px; font-weight: 400; color: #1A1A1A; line-height: 1; margin-bottom: 4px; }
 .score-label { font-size: 10px; color: #9B9893; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 20px; }
 .section-label { font-size: 10px; color: #9B9893; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; font-weight: 500; }
 
 /* Category rows */
-.cat-row { padding: 8px 0; border-bottom: 1px solid #F4F2EE; }
+.cat-row { padding: 8px 0; border-bottom: 1px solid #F0E8DC; }
 .cat-row:last-child { border-bottom: none; }
 .cat-row-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
 .cat-dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; margin-right: 8px; }
 .cat-name { font-size: 13px; font-weight: 600; color: #1A1A1A; }
 .cat-score { font-size: 13px; font-weight: 600; }
-.cat-bar-bg { height: 3px; background: #F0EDE8; border-radius: 2px; margin-bottom: 4px; }
+.cat-bar-bg { height: 3px; background: #F0E8DC; border-radius: 2px; margin-bottom: 4px; }
 .cat-bar-fill { height: 3px; border-radius: 2px; }
 .cat-summary { font-size: 11px; color: #9B9893; padding-left: 15px; }
-.score-red { color: #D85A30; }
-.score-amber { color: #EF9F27; }
-.score-green { color: #1D9E75; }
-.dot-red { background: #D85A30; }
-.dot-amber { background: #EF9F27; }
-.dot-green { background: #1D9E75; }
-.bar-red { background: #D85A30; }
-.bar-amber { background: #EF9F27; }
-.bar-green { background: #1D9E75; }
+.score-red { color: #C0392B; }
+.score-amber { color: #F2A627; }
+.score-green { color: #C0392B; }
+.dot-red { background: #C0392B; }
+.dot-amber { background: #F2A627; }
+.dot-green { background: #C0392B; }
+.bar-red { background: #C0392B; }
+.bar-amber { background: #F2A627; }
+.bar-green { background: #C0392B; }
 
 /* Ask AI button */
 .ask-btn {
     width: 100%; margin-top: 20px; padding: 12px;
-    background: #1D9E75; color: white; border: none;
+    background: #C0392B; color: white; border: none;
     border-radius: 8px; font-size: 13px; font-weight: 500;
     cursor: pointer; text-align: center;
 }
 
 /* Map area */
-.map-area { background: #F8F8F6; position: relative; overflow: hidden; }
+.map-area { background: #FDF6EE; position: relative; overflow: hidden; }
 
 /* Right panel — chat */
 .chat-panel {
-    border-left: 1px solid #E8E8E5;
+    border-left: 1px solid #E8DDD0;
     display: flex; flex-direction: column;
     background: #fff; height: 100%;
 }
-.chat-header { padding: 16px 18px 12px; border-bottom: 1px solid #F4F2EE; }
+.chat-header { padding: 16px 18px 12px; border-bottom: 1px solid #F0E8DC; }
 .chat-title { font-size: 14px; font-weight: 600; color: #1A1A1A; display: flex; align-items: center; gap: 8px; }
-.chat-dot { width: 8px; height: 8px; border-radius: 50%; background: #1D9E75; }
+.chat-dot { width: 8px; height: 8px; border-radius: 50%; background: #C0392B; }
 .chat-subtitle { font-size: 11px; color: #9B9893; margin-top: 2px; }
-.chat-chips { padding: 12px 18px; display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #F4F2EE; }
-.chip { padding: 7px 12px; border-radius: 20px; font-size: 11px; background: #F0FAF6; border: 1px solid #B8E8D4; color: #0F6E56; cursor: pointer; display: inline-block; }
+.chat-chips { padding: 12px 18px; display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #F0E8DC; }
+.chip { padding: 7px 12px; border-radius: 20px; font-size: 11px; background: #FDF2F0; border: 1px solid #F5C0BA; color: #9B2B20; cursor: pointer; display: inline-block; }
 .chat-messages { flex: 1; overflow-y: auto; padding: 14px 18px; display: flex; flex-direction: column; gap: 10px; }
-.msg-user { align-self: flex-end; background: #1D9E75; color: white; padding: 10px 14px; border-radius: 16px 16px 4px 16px; font-size: 12px; max-width: 85%; line-height: 1.5; }
+.msg-user { align-self: flex-end; background: #C0392B; color: white; padding: 10px 14px; border-radius: 16px 16px 4px 16px; font-size: 12px; max-width: 85%; line-height: 1.5; }
 .msg-ai { align-self: flex-start; max-width: 95%; }
-.msg-ai-card { background: #F8F8F6; border: 1px solid #E8E8E5; border-radius: 4px 16px 16px 16px; padding: 12px 14px; }
+.msg-ai-card { background: #FDF6EE; border: 1px solid #E8DDD0; border-radius: 4px 16px 16px 16px; padding: 12px 14px; }
 .msg-step { display: flex; gap: 10px; margin-bottom: 8px; font-size: 12px; line-height: 1.5; color: #1A1A1A; }
 .msg-step:last-of-type { margin-bottom: 0; }
-.step-num { width: 20px; height: 20px; border-radius: 50%; background: #E1F5EE; color: #085041; font-size: 10px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+.step-num { width: 20px; height: 20px; border-radius: 50%; background: #FDECEA; color: #7A1F16; font-size: 10px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
 .msg-legal-aid { font-size: 11px; color: #9B9893; font-style: italic; margin-top: 10px; }
-.chat-input-area { padding: 12px 18px; border-top: 1px solid #E8E8E5; }
+.chat-input-area { padding: 12px 18px; border-top: 1px solid #E8DDD0; }
 .chat-placeholder { font-size: 12px; color: #9B9893; }
-div[role="radiogroup"] label{background:#F0EDE8;border-radius:20px;padding:5px 16px;font-size:12px;font-weight:500;border:1px solid #E8E8E5;margin-right:6px;display:inline-flex;align-items:center;cursor:pointer;} div[role="radiogroup"] label:has(input:checked){background:#1D9E75!important;color:white!important;border-color:#1D9E75!important;} div[role="radiogroup"] label input{display:none!important;} div[role="radiogroup"]{gap:0!important;flex-wrap:wrap;}
+div[role="radiogroup"] label{background:#F0E8DC;border-radius:20px;padding:5px 16px;font-size:12px;font-weight:500;border:1px solid #E8DDD0;margin-right:6px;display:inline-flex;align-items:center;cursor:pointer;} div[role="radiogroup"] label:has(input:checked){background:#C0392B!important;color:white!important;border-color:#C0392B!important;} div[role="radiogroup"] label input{display:none!important;} div[role="radiogroup"]{gap:0!important;flex-wrap:wrap;}
 [data-testid="stSegmentedControl"] { margin-bottom: 0 !important; padding-bottom: 0 !important; } .stColumns { margin-top: 0 !important; } div[data-testid="column"] { padding-top: 0 !important; }
 section[data-testid="stMain"] .block-container{padding-top:0.2rem!important;} div[data-testid="stVerticalBlockBorderWrapper"]{padding:0!important;} [data-testid="stSegmentedControl"]{margin-bottom:0!important;}
 </style>
@@ -275,7 +275,7 @@ with col_f3:
                                    value="2025", label_visibility="collapsed")
     st.session_state.selected_year = year_choice
 
-st.markdown("<hr style=\"margin:4px 0;border:none;border-top:1px solid #E8E8E5;\">", unsafe_allow_html=True)
+st.markdown("<hr style=\"margin:4px 0;border:none;border-top:1px solid #E8DDD0;\">", unsafe_allow_html=True)
 
 # ── Filter data ─────────────────────────────────────────────────────────────────
 year_df = df[df['year'] == st.session_state.selected_year].copy()
@@ -298,9 +298,9 @@ with left:
     overall = round(float(row['overall']), 2) if row is not None and pd.notna(row['overall']) else None
 
     st.markdown(f"<h2 style='font-size:26px;font-weight:800;color:#1A1A1A;margin-bottom:2px;margin-top:4px;line-height:1;'>{country}</h2>", unsafe_allow_html=True)
-    st.markdown(f"<span style='background:#F0EDE8;color:#6B6B6B;padding:3px 10px;border-radius:20px;font-size:11px;'>{region_label} · {st.session_state.selected_year}</span>", unsafe_allow_html=True)
+    st.markdown(f"<span style='background:#F0E8DC;color:#6B6B6B;padding:3px 10px;border-radius:20px;font-size:11px;'>{region_label} · {st.session_state.selected_year}</span>", unsafe_allow_html=True)
     st.markdown(f"<div style='font-family:Georgia,serif;font-size:28px;color:#1A1A1A;line-height:1;margin:2px 0 1px;'>{overall if overall else '—'}</div>", unsafe_allow_html=True)
-    st.markdown("<div style='font-size:9px;color:#9B9893;text-transform:uppercase;letter-spacing:0.06em;margin:2px 0 6px;'>Overall Rule of Law Score</div><div style='height:1px;background:#F4F2EE;margin:4px 0;'></div><div style='font-size:9px;color:#9B9893;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;'>Your rights here</div>", unsafe_allow_html=True)
+    st.markdown("<div style='font-size:9px;color:#9B9893;text-transform:uppercase;letter-spacing:0.06em;margin:2px 0 6px;'>Overall Rule of Law Score</div><div style='height:1px;background:#F0E8DC;margin:4px 0;'></div><div style='font-size:9px;color:#9B9893;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;'>Your rights here</div>", unsafe_allow_html=True)
 
     for cat_name, meta in CATEGORIES.items():
         col = meta["col"]
@@ -350,14 +350,14 @@ with centre:
         color="score",
         hover_name="country",
         hover_data={"score_fmt": True, "iso3": False, "score": False},
-        color_continuous_scale=["#D85A30", "#EF9F27", "#1D9E75"],
+        color_continuous_scale=["#C0392B", "#F2A627", "#C8D97A"],
         range_color=[0, 1],
         labels={"score_fmt": map_title, "score": "Score"}
     )
     fig.update_layout(
         margin=dict(l=0, r=0, t=0, b=0),
-        paper_bgcolor="#F8F8F6",
-        plot_bgcolor="#F8F8F6",
+        paper_bgcolor="#FDF6EE",
+        plot_bgcolor="#FDF6EE",
         geo=dict(
             showframe=False,
             showcoastlines=True,
@@ -365,9 +365,9 @@ with centre:
             showland=True,
             landcolor="#EEECEA",
             showocean=True,
-            oceancolor="#F8F8F6",
+            oceancolor="#FDF6EE",
             showlakes=False,
-            bgcolor="#F8F8F6",
+            bgcolor="#FDF6EE",
             projection_type="natural earth"
         ),
         coloraxis_colorbar=dict(
@@ -380,7 +380,7 @@ with centre:
             y=0.1,
             yanchor="bottom",
             bgcolor="rgba(255,255,255,0.8)",
-            bordercolor="#E8E8E5",
+            bordercolor="#E8DDD0",
             borderwidth=1,
         ),
         height=580
@@ -436,7 +436,7 @@ with right:
             if msg["role"] == "user":
                 st.markdown(f'<div class="msg-user">{msg["content"]}</div>', unsafe_allow_html=True)
             else:
-                st.markdown(f'<div class="msg-ai-card" style="background:#F8F8F6;border:1px solid #E8E8E5;border-radius:4px 16px 16px 16px;padding:12px 14px;font-size:12px;line-height:1.6;color:#1A1A1A;">{msg["content"]}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="msg-ai-card" style="background:#FDF6EE;border:1px solid #E8DDD0;border-radius:4px 16px 16px 16px;padding:12px 14px;font-size:12px;line-height:1.6;color:#1A1A1A;">{msg["content"]}</div>', unsafe_allow_html=True)
 
     # AI response trigger
     if st.session_state.chat_messages and st.session_state.chat_messages[-1]["role"] == "user":
