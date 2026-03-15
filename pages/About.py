@@ -1,31 +1,50 @@
 import streamlit as st
 
-st.set_page_config(page_title="About — Justice Map", page_icon="⚖️", layout="wide")
+st.set_page_config(page_title="About — Justice Map", page_icon="⚖️", layout="centered")
 
-st.markdown("# About Justice Map")
-st.markdown("**Justice Map** is a legal empowerment platform that gives every person — regardless of income, education, or country — the awareness to understand their rights, recognise when they are being wronged, and know what to do next.")
+st.markdown("""
+<style>
+[data-testid="stSidebar"] { display: none; }
+.block-container { max-width: 700px; padding: 3rem 2rem; }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("# Justice Map")
+st.markdown("#### Legal empowerment for everyone, everywhere.")
+
+st.markdown("""
+Justice Map exists because the law is one of the most powerful forces in a person's life — 
+and most people have no idea how it works where they live. Whether you're facing an unfair 
+eviction, an employer who won't pay you, or a government that ignores your complaint, 
+your first step is knowing your rights. Justice Map gives you that.
+""")
 
 st.markdown("---")
 
-st.markdown("### Why this exists")
-st.markdown("The law is complex, expensive, and different in every country. Most people don't know their rights until it's too late. Justice Map was built to change that — not by replacing lawyers, but by giving ordinary people a compass.")
+st.markdown("### How it works")
+st.markdown("""
+- **The map** shows rule-of-law scores for 143 countries, sourced from the World Justice Project Rule of Law Index 2025 — the world's most credible independent legal measurement, built from 150,000+ household surveys and 4,000+ legal experts annually.
+- **The 7 categories** (Employment, Housing, Consumer, Family, Debt, Immigration, Government) each map to the closest WJP sub-indicator. These are approximations — no single score perfectly captures a legal category, but each is grounded in real data.
+- **The AI Legal Guide** is powered by Claude (Anthropic). Every response is grounded in that country's actual WJP scores. It tells you what your rights look like, what the risks are, and what to do next — in plain language. It is not a lawyer and does not give legal advice.
+- **The corruption warnings** appear when a country's F2 (Absence of Corruption) score falls below 0.50 — meaning courts or officials in that country have a documented history of improper influence.
+""")
 
-st.markdown("### The data")
-st.markdown("All scores come from the **World Justice Project Rule of Law Index 2025** — an independent, peer-reviewed annual survey covering 143 countries, 150,000+ household surveys, and 4,000+ legal experts.")
-
-st.markdown("### Category score mappings")
-st.table({
-    "Category": ["Employment", "Housing", "Consumer", "Family", "Debt", "Immigration", "Government"],
-    "WJP Indicator": ["F4.8 — Fundamental labour rights", "F7.1 — Access to civil justice", "F6 — Regulatory enforcement", "F7 — Civil justice system", "F2.1 — Absence of executive corruption", "F4.2 — Right to life & security", "F3 — Open government"],
-})
-
-st.markdown("### The AI Legal Guide")
-st.markdown("Powered by Claude (Anthropic), grounded in each country's actual WJP scores. Provides legal **awareness** — not legal advice. Always consult a qualified lawyer for your specific situation.")
-
-st.markdown("### Limitations")
-st.markdown("- Data updated annually — not real-time\n- Coverage: 143 countries\n- Category mappings are approximations\n- AI responses are for awareness only")
+st.markdown("---")
 
 st.markdown("### Built by")
-st.markdown("**Sia Dave** · Year 1 IB Diploma · Dwight Global Online School · Dubai")
-st.markdown("Inspired by Tech Unicorn — legal technology across US and GCC jurisdictions.")
-st.markdown("[View source on GitHub](https://github.com/siadave1611-arc/justicemap)")
+st.markdown("""
+**Sia Kukreja** — Year 1 IB Diploma, Dwight Global Online School, Dubai.
+
+Studying Math AA HL, Computer Science HL, and Global Politics HL. 
+Interested in applied mathematics, AI, and the intersection of technology and justice systems.
+
+This project is part of a broader vision to make legal systems legible to the people they're 
+supposed to serve — inspired by watching legal technology deployed in courtrooms, and asking 
+why the same tools aren't available to the people on the other side of the bench.
+""")
+
+st.markdown("---")
+st.markdown("<p style='font-size:12px;color:#9B9893;'>Data: World Justice Project Rule of Law Index 2025 · AI: Claude by Anthropic · <a href='https://github.com/siadave1611-arc/justicemap'>View on GitHub</a></p>", unsafe_allow_html=True)
+
+if st.button("← Back to Justice Map"):
+    st.switch_page("app.py")

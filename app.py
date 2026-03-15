@@ -9,7 +9,7 @@ st.set_page_config(
     page_title="Justice Map",
     page_icon="⚖️",
     layout="wide",
-    initial_sidebar_state="collapsed"
+    initial_sidebar_state="auto"
 )
 
 # ── CSS ────────────────────────────────────────────────────────────────────────
@@ -256,10 +256,15 @@ st.markdown("""
     <span class="badge">Source: WJP Rule of Law Index 2025</span>
     <span style="font-size:16px">🌐</span>
   </div>
-</div>
-""", unsafe_allow_html=True)
+</div>""", unsafe_allow_html=True)
 
 # ── Filter bar ──────────────────────────────────────────────────────────────────
+
+if st.session_state.get("show_about", False):
+    st.info("**Justice Map** — Legal empowerment for everyone. | Data: WJP 2025, 143 countries | AI: Claude by Anthropic | Built by Sia Dave · IB Year 1 · Dubai | [GitHub](https://github.com/siadave1611-arc/justicemap)")
+    if st.button("Close", key="close_about"):
+        st.session_state["show_about"] = False
+        st.rerun()
 dims = {"Overall Score": "overall", "Civil Justice": "f7", "Fundamental Rights": "f4", "Criminal Justice": "f8"}
 years = sorted(df['year'].dropna().unique().tolist(), reverse=True)
 regions = ["All Regions"] + sorted(df['region'].dropna().unique().tolist())
