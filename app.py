@@ -254,9 +254,11 @@ st.markdown("""
   </div>
   <div class="topnav-right">
     <span class="badge">Source: WJP Rule of Law Index 2025</span>
+    <a href="/About" target="_self" style="font-size:12px;color:#1A1A1A;text-decoration:none;padding:4px 12px;border:1px solid #E8DDD0;border-radius:20px;background:#fff;">About</a>
     <span style="font-size:16px">🌐</span>
   </div>
 </div>""", unsafe_allow_html=True)
+
 
 # ── Filter bar ──────────────────────────────────────────────────────────────────
 
